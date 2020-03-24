@@ -1,0 +1,983 @@
+
+$pink:#ed0a60;
+$grey:#424343;
+$white:#fff;
+#wrapper{
+    overflow: hidden;
+}
+section{
+    position: relative;
+}
+.inner{
+    z-index: 100;
+}
+.rellax{
+    z-index: 50;
+}
+.parallax {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    
+}
+.header{
+    background-image: url(../images/backgrounds/header.jpg);
+    padding: 66px 0 89px;
+
+   
+    &__content{
+        position: relative;
+        z-index: 10;
+    }
+
+    &__logo{
+        height: 69px;
+        width: 219px;
+        margin-bottom: 61px;
+
+        a,span{
+            display: block;
+            height: 100%;
+            background: url(../images/logo.png) center left no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__parallax{
+        position: absolute;
+        top: 164px;
+        left: 81px;
+    }
+
+    &__pretitle{
+        font-weight: 800;
+        margin-bottom: 17px;
+        font-size: 18px;
+        line-height: 21px;
+        text-transform: uppercase;
+    }
+
+    &__title{
+        font-size: 80px;
+        line-height: 90px;
+        color: $pink;
+        font-weight: 800;
+        font-style: italic;
+        text-transform: uppercase;
+        letter-spacing: -0.6px;
+    }
+
+    &__text{
+        font-size: 34px;
+        line-height: 40px;
+        font-weight: 300;
+        margin-top: 19px;
+    }
+
+    &__button{
+        max-width: 265px;
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    &__gift{
+        margin-top: 27px;
+    }
+
+    &__image{
+        position: absolute;
+        left: 39%;
+        width: 100%;
+        height: 100%;
+        top: -62px;
+    }
+
+}
+.button{
+    position: relative;
+    box-sizing: border-box;
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 23px;
+    color: $white;
+    display: block;
+    border-radius: 34px;
+    padding: 22.5px;
+    font-weight: 800;
+    font-style: italic;
+    transition:background-color .3,color .3s;
+    transition-delay: 0s, .3s;
+    
+
+    
+    box-shadow: 0px 20px 40px 0px rgba(59, 50, 54, 0.2);
+    
+    span{
+        position: relative;
+        z-index: 2;
+    }
+
+    &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 100%;
+        width: 51%;
+        top: 0;
+        border-radius: 34px 0 0 34px;
+        background-image: linear-gradient(rgb(247,117,166) 0%, rgb(237,10,96) 100%);
+        
+        transition: .3s;
+    }
+    &:after{
+        content: '';
+        position: absolute;
+        right: 0;
+        height: 100%;
+        width: 51%;
+        top: 0;
+        border-radius: 34px 0 0 34px;
+        transform: rotate(180deg);
+        background-image: linear-gradient(0deg, rgb(247,117,166) 0%, rgb(237,10,96) 100%);
+        
+        transition: .3s;
+
+    }
+
+    &:hover{
+        background-color: $white;
+        color: $pink;
+
+        &:before{
+            width: 34px;
+            
+            opacity: 0;
+        }
+        &:after{
+            width: 34px;
+           
+            opacity: 0;
+        }
+    }
+
+
+    
+   
+
+   
+}
+.section-title{
+    font-size: 46px;
+    line-height: 50px;
+    font-style: italic;
+    font-weight: 800;
+
+    &--center{
+        text-align: center;
+    }
+}
+.gift{
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 120px;
+
+    &::before{
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 68px;
+        height: 39px;
+        margin-top: -20px;
+        width: 80px;
+        background: url(../img/gift-arrow.png) no-repeat center left;
+        background-size: contain;
+
+    }
+
+    &__image{
+        margin-right: 20px;
+    }
+    &__title{
+        font-size: 20px;
+        line-height: 23px;
+        font-weight: 800;
+        margin-bottom: 5px;
+    }
+}
+
+.for-whom{
+    padding: 82px 0 73px;
+
+    &__row{
+        margin-top: 49px;
+        flex-wrap: wrap;
+
+    }
+
+    &__item-container{
+        width: 25%;
+        box-sizing: border-box;
+        padding: 0 10px;
+        margin-bottom: 45px;
+    }
+
+    &__button{
+        max-width: 265px;
+        margin: 0 auto;
+    }
+    &__parallax{
+        position: absolute;
+        right: 122px;
+        top: 601px;
+    }
+
+}
+.for-whom-item{
+    &__icon-container{
+        width: 146px;
+        height: 146px;
+        margin: 0 auto 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: #f7f7f7;
+        transition: .3s ease-in-out;
+
+        .icon{
+            max-height: 72px;
+            max-width: 72px;
+            fill: #f24285;
+            transition: .3s ease-in-out;
+        }
+
+        &:hover{
+            background-color: #f24285;
+
+            .icon{
+                fill: #f7f7f7;
+            }
+        }
+    }
+
+    &__text{
+        text-align: center;
+    }
+
+    
+}
+
+.program{
+    padding: 117px 0;
+    background-image: url(../images/backgrounds/program.jpg);
+    &:after{
+        content: '';
+        position: absolute;
+        bottom: -24px;
+        left: 50%;
+        background: url(../images/backgrounds/program-after.png) center center no-repeat;
+        width: 137px;
+        height: 141px;
+        margin-left: -592px;
+    }
+    &__row{
+        margin-top: 79px;
+        flex-wrap: wrap;
+        margin-right: -30px;
+    }
+    
+    &__item-container{
+        width: 33.3%;
+        box-sizing: border-box;
+        padding-right: 30px;
+        margin-bottom: 49px;
+    }
+
+    &__button{
+        max-width: 308px;
+        margin: 0 auto;
+    }
+}
+.program-item{
+    &__count{
+        height: 120px;
+        width: 120px;
+        box-sizing: border-box;
+        font-style: italic;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        border-radius: 50%;
+        color: #fff;
+        background-image: linear-gradient( rgb(247,117,166) 0%, rgb(237,10,96) 100%);
+        border: 10px solid #f2c5d5;
+        box-shadow: 0 0 0 10px #f5dee7;
+        margin: 0 0 36px 10px;
+        b{
+            font-size: 46px;
+            line-height: 39px;
+        }
+        span{
+            font-size: 18px;
+            line-height: 21px;
+        }
+    }
+    &__title{
+        font-size: 28px;
+        line-height: 35px;
+        margin-bottom: 14px;
+        font-weight: 800;
+    }
+
+    &__list-item{
+        position: relative;
+        box-sizing: border-box;
+        padding-left: 27px;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 19px;
+            height: 19px;
+            background: url(../images/icons/checked-pink.svg) left center no-repeat;
+            background-size: contain;
+        }
+    }
+    &__list-item + &__list-item{
+        margin-top: 19px;
+    }
+}
+.pass{
+    padding: 74px 0 118px;
+    &__item-container{
+        width: 33.3%;
+        padding: 0 10px;
+        margin-bottom: 56px;
+        box-sizing: border-box;
+    }
+    &__row{
+        flex-wrap: wrap;
+        margin-top: 61px;
+    }
+
+    
+    &__button{
+        max-width: 262px;
+        margin: 0 auto;
+    }
+
+    &__parallax{
+        position: absolute;
+       &--right{
+        right: 0;
+        top: 750px;
+       }
+
+       &--left{
+        left: 145px;
+        top: 250px;
+    
+       }
+    }
+}
+.pass-item{
+
+    &__icon-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-image: linear-gradient( -90deg, rgb(247,117,166) 0%, rgb(237,10,96) 100%);
+        box-shadow: 0px 20px 40px 0px rgba(59, 50, 54, 0.2);
+        width: 146px;
+        height: 146px;
+        transition: .5s;
+        margin: 0 auto 27px;
+        
+        .icon{
+            max-width: 72px;
+            max-height: 72px;
+            fill: #fff;
+            transition: .3s;
+        }
+
+        &:hover{
+           transform: rotate(360deg);
+        }
+          
+    }
+
+    &__text{
+        text-align: center;
+    }
+}
+.lecturer{
+    background-image: url(../images/backgrounds/lecturer.jpg);
+    padding: 86px 0 113px;
+
+    &__name{
+        font-size: 46px;
+        line-height: 50px;
+        color:$pink;
+        font-style: italic;
+        font-weight: 800; 
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    &__list{
+        max-width: 685px;
+        margin-top: 47px;
+    }
+
+    &__item{
+        position: relative;
+        font-size: 20px;
+        line-height: 28px;
+        box-sizing: border-box;
+        padding-left: 37px;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 25px;
+            height: 24px;
+            background: url(../images/icons/checked-pink.svg) left center no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__item + &__item{
+        margin-top: 20px;
+    }
+
+    &__button{
+        max-width: 292px;
+        margin-top: 40px;
+    }
+
+    &__image{
+        position: absolute;
+        left: 60.9%;
+        top: 89px;
+        height: 100%;
+        width: 100%;
+
+    }
+
+    
+}
+
+.after{
+    padding: 67px 0 90px;
+
+    &__content{
+       padding-top: 58px;
+       max-width: 100%;
+       width: 100%;
+    }
+
+
+    &__image{
+        width: 551px;
+        height: 525px;
+        margin-left: -29px;
+        margin-top: 38px;
+        margin-right: 63px;
+    }
+
+    &__list{
+        margin-top: 33px;
+    }
+    &__item{
+        position: relative;
+        font-size: 20px;
+        line-height: 28px;
+        box-sizing: border-box;
+        padding-left: 34px;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 25px;
+            height: 24px;
+            background: url(../images/icons/checked-pink.svg) left center no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__item + &__item{
+        margin-top: 24px;
+    }
+
+    &__button{
+        margin-top: 45px;
+        max-width: 262px;
+    }
+
+    &__parallax{
+        position: absolute;
+        left: 53px;
+        top: -1189px;
+    }
+}
+
+.callback{
+    padding: 119px 0 94px;
+    background-image: url(../images/backgrounds/form.jpg);
+
+    &__input{
+        width: 292px;
+        margin: 0 15px 45px;
+        height: 68px;
+        box-shadow: 0px 20px 40px 0px rgba(59, 50, 54, 0.2);
+        background-color: $white;
+        border-radius: 34px;
+        box-sizing: border-box;
+        padding: 0 10px 0 47px;
+        font-size: 17px;
+        line-height: 21px;
+        color: #979797;
+
+    }
+
+    &__button{
+        width: 292px;
+        margin: 0 15px;
+    }
+
+    &__row{
+        margin-top: 40px;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    &__parallax{
+      position: absolute;
+      right: 102px;
+      top: 1330px;
+    }
+}
+
+.social{
+
+    &__item{
+        height: 45px;
+        width: 45px;
+        border-radius: 50%;
+
+        img{
+            display: block;
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    &__item + &__item{
+        margin-left: 5px;
+    }
+}
+.footer{
+    padding: 54px 0 35px;
+    &__logo{
+        width: 195px;
+        height: 62px;
+        margin-right: 36px;
+
+        a,span{
+            height: 100%;
+            display: block;
+            background: url(../images/logo.png) center left no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__info{
+        font-size: 16px;
+        line-height: 26px;
+    }
+    
+    &__social{
+        margin-left: auto;
+        margin-right: 37px;
+    }
+    &__contacts{
+        text-align: right;
+    }
+
+    &__link{
+        font-size: 18px;
+        line-height: 26px;
+        color: #212121;
+    }
+
+}
+
+@media screen and (max-width:1024px){
+    .on__desktop, .rellax{
+        display: none;
+    }
+    
+    body{
+        font-size: 16px;
+        line-height: 22px;
+    }
+    .section-title{
+        font-size: 30px;
+        line-height: 37px;
+    }
+    .header{
+        &__logo{
+            margin: 0 auto 30px;
+        }
+        &__image{
+            display: none;
+        }
+        &__title{
+            font-size: 60px;
+        }
+        &__title, &__pretitle,&__text{
+            text-align: center;
+        }
+        &__button{
+            margin: 25px auto 0;
+        }
+    }
+   
+    .program-item{
+
+        &__count{
+            height: 100px;
+            width: 100px;
+            margin: 0 0 26px 10px;
+
+            b{
+                font-size: 40px;
+                line-height: 33px;
+            }
+        }
+
+        &__title{
+            font-size: 24px;
+            line-height: 28px;
+        }
+
+        &__list-item+&__list-item{
+            margin-top: 10px;
+        }
+    }
+    .lecturer{
+        &__name{
+            font-size: 30px;
+            line-height: 37px;
+            margin-bottom: 10px;
+        }
+
+        &__image{
+            top: 67px;
+        }
+    }
+    .after{
+        padding: 50px 0;
+
+        &__container{
+            flex-direction: column;
+        }
+
+        &__image{
+            margin: 0 auto 20px;
+            max-width: 100%;
+            width: 524px;
+            height: auto;
+            img{
+                max-width: 100%;
+                max-height: 400px;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+        &__content{
+            padding-top: 0;
+        }
+
+        &__item{
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        &__item + &__item{
+            margin-top: 20px;
+        }
+
+        &__button{
+            margin: 20px auto 0;
+        }
+    }
+    .callback{
+        padding: 70px 0;
+
+        &__input{
+            margin: 0 15px 20px;
+            padding: 0 10px 0 25px;
+        }
+        
+    }
+    .footer{
+        padding: 30px 0;
+
+        &__container{
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+        &__contacts{
+            text-align: left;
+        }
+        &__right-side{
+            margin-top: 20px;
+        }
+    }
+    
+}
+@media screen and (max-width:1024px) and (min-width:767px){
+    .gift{
+        padding: 0;
+        justify-content: center;
+        &:before{
+            position: static;
+        }
+    }
+}
+@media screen and (max-width:800px){
+   
+    .program{
+        &__row{
+            margin-top: 30px;
+        }
+        &__item-container{
+            width: 50%;
+        }
+    }
+    .pass{
+
+        &__row{
+            margin-top: 30px;
+        }
+    }
+    .for-whom{
+    
+        padding: 50px 0;
+
+        &__row{
+            margin-top: 30px;
+        }
+        &__item-container{
+            width: 50%;
+            margin-bottom: 30px;
+        }
+    }
+    .lecturer {
+        padding: 70px 0;
+
+        &__image{
+            position: relative;
+            top: 0;
+            left: 0;
+            max-width: 500px;
+           
+            margin: 0 auto;
+            .parallax{
+                position: static;
+            }
+            img{
+                max-height: 400px;
+                max-width: 100%;
+            }
+        }
+
+        &__item{
+            font-size: 18px;
+            line-height: 26px;
+        }
+
+        &__button{
+            margin: 30px auto 0;
+        }
+    }
+    
+
+    
+}
+@media screen and (max-width:768px){
+    .header{
+        &__title{
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        &__text{
+            font-size: 25px;
+            line-height: 30px;
+        }
+
+        &__button{
+            margin: 15px auto 0;
+        }
+    }
+
+    .pass{
+
+        &__item-container{
+            width: 50%;
+            margin-bottom: 25px;
+            padding: 0 2px;
+        }
+    }
+    .pass-item{
+
+        &__icon-container{
+            height: 120px;
+            width: 120px;
+            margin: 0 auto 15px;
+            .icon{
+              
+              height: 60px;
+              width: 60px;
+            }
+        }
+        br{
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width:450px){
+    body{
+        font-size: 15px;
+        line-height: 21px;
+    }
+    .header{
+        padding: 25px 0 50px;
+        &__title{
+            font-size: 34px;
+            line-height: 40px;
+        }
+        &__pretitle{
+            font-size: 17px;
+        }
+        &__text{
+            font-size: 20px;
+            line-height: 25px;
+        }
+        &__logo{
+            margin-bottom: 35px;
+        }
+    }
+    .gift{
+        padding-left: 0;
+        padding-top: 75px;
+
+        &:before{
+            top: 0;
+            margin-top: 0;
+           
+            transform: rotate(90deg);
+        }
+
+        &__image{
+            margin-left: -35px;
+        }
+    }
+    .program{
+        padding: 50px 0 65px;
+        &__item-container{
+            width: 100%;
+
+            &:nth-child(2){
+                .program-item__count{
+                    margin: 0 auto 26px;
+                }
+            }
+            &:nth-child(3){
+                .program-item__count{
+                  float: right;
+                  margin-right: 10px;
+
+                  
+                }
+            }
+        }
+    }
+    .program-item{
+
+        &__title{
+            clear: both;
+        }
+    }
+    .pass{
+        padding: 50px 0;
+    }
+    .for-whom-item{
+
+        &__icon-container{
+            width: 120px;
+            height: 120px;
+
+            .icon{
+                max-height: 60px;
+                max-width: 60px;
+            }
+        }
+    }
+
+    .lecturer {
+       &__item{
+           font-size: 17px;
+           line-height: 25px;
+
+           br{
+               display: none;
+           }
+       }
+       &__item +  &__item{
+           margin-top: 10px;
+       }
+    }
+    .after{
+        &__item{
+            font-size: 17px;
+            line-height: 25px;
+        }
+
+        &__item + &__item{
+            margin-top: 10px;
+        }
+    }
+    .footer{
+
+        &__left-side,&__right-side{
+            flex-direction: column;
+        }
+        &__info{
+            text-align: center;
+        }
+        &__logo{
+            margin: 0 auto 10px;
+        }
+        &__social{
+            margin: 0 auto 15px;
+        }
+        &__contacts{
+            text-align: center;
+        }
+    }
+}
